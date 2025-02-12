@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Airbnb Property Listings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Search Airbnb Property Listings</h1>
+    <form id="searchForm">
+      <input type="text" id="location" placeholder="Enter Location..." required>
+      <select id="propertyType">
+        <option value="" disabled selected>Select Property Type...</option>
+        <option value="">Any Type</option>
+        <option value="Loft">Loft</option>
+        <option value="Apartment">Apartment</option>
+        <option value="House">House</option>
+      </select>
+      <select id="bedrooms">
+        <option value="" disabled selected>Select No. of Bedrooms...</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="">Any No. Of Bedrooms</option>
+      </select>
+      <button type="submit" class="search-button">Search</button>
+    </form>
+
+    <h2 id="randomListingsHeader">Property Listings</h2>
+    <table id="randomListingsTable">
+      <thead>
+        <tr>
+          <th>Property Name</th>
+          <th>Summary</th>
+          <th>Daily Price</th>
+          <th>Review Score Rating</th>
+        </tr>
+      </thead>
+      <tbody id="listingsTable">
+      </tbody>
+    </table>
+
+    <h2 id="searchResultsHeader" style="display:none;">Search Results</h2>
+    <table id="searchResultsTable" style="display:none;">
+      <thead>
+        <tr>
+          <th>Property Name</th>
+          <th>Summary</th>
+          <th>Daily Price</th>
+          <th>Review Score Rating</th>
+        </tr>
+      </thead>
+      <tbody id="searchListingsBody">
+      </tbody>
+    </table>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

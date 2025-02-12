@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Confirmation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Your Booking Has Been Confirmed!</h1>
+    <p><strong>Listing ID:</strong> <span id="listingId"></span></p>
+    <p><strong>Name:</strong> <span id="clientName"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Daytime Phone Number:</strong> <span id="daytimePhone"></span></p>
+    <p><strong>Mobile Phone Number:</strong> <span id="mobile"></span></p>
+    <p><strong>Postal Address:</strong> <span id="postalAddress"></span></p>
+    <p><strong>Home Address:</strong> <span id="homeAddress"></span></p>
+    <p><strong>Start Date:</strong> <span id="startDate"></span></p>
+    <p><strong>End Date:</strong> <span id="endDate"></span></p>
+    <button onclick="window.location.href='index.html'" class="btn-primary">Return Homepage</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+
+      document.getElementById('listingId').textContent = urlParams.get('listing_id') || 'N/A';
+      document.getElementById('clientName').textContent = urlParams.get('clientName') || 'N/A';
+      document.getElementById('email').textContent = urlParams.get('email') || 'N/A';
+      document.getElementById('daytimePhone').textContent = urlParams.get('daytimePhone') || 'N/A';
+      document.getElementById('mobile').textContent = urlParams.get('mobile') || 'N/A';
+      document.getElementById('postalAddress').textContent = urlParams.get('postalAddress') || 'N/A';
+      document.getElementById('homeAddress').textContent = urlParams.get('homeAddress') || 'N/A';
+      document.getElementById('startDate').textContent = urlParams.get('startDate') || 'N/A';
+      document.getElementById('endDate').textContent = urlParams.get('endDate') || 'N/A';
+    });
+  </script>  
+</body>
+</html>
