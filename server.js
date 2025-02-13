@@ -13,13 +13,15 @@ let db, listingsCollection, bookingsCollection;
 
 async function connectToDatabase() {
   try {
+    console.log("Attempting to connect to MongoDB...");
     await client.connect();
-    db = client.db("sample_airbnb");
+    const db = client.db("sample_airbnb");
     listingsCollection = db.collection("listingsAndReviews");
     bookingsCollection = db.collection("bookings");
     console.log("Connected to MongoDB");
   } catch (error) {
-    console.error("Failed to connect to MongoDB", error);
+    console.error("Failed to connect to MongoDB:", error);
+    return;
   }
 }
 
