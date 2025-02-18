@@ -1,6 +1,6 @@
 # MERN Stack Application
 
-This application is configured to run in a development environment only.
+This application is configured to run in a development environment only. A website is also available to run the current build.
 
 ## Prerequisites
 
